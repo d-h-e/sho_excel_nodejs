@@ -1,7 +1,7 @@
 const xlsx = require('xlsx');
 const fs = require('fs');
 
-const file = xlsx.readFile('sho_excel.xlsx');
+const file = xlsx.readFile('./EXCEL-FILE/sho_excel.xlsx');
 const sheet = file.Sheets['Sheet1'];
 
 const data = xlsx.utils.sheet_to_json(sheet);
