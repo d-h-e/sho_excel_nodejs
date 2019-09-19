@@ -2,7 +2,9 @@ const xlsx = require('xlsx');
 const fs = require('fs');
 
 const file = xlsx.readFile('./EXCEL-FILE/sho_excel.xlsx');
-const sheet = file.Sheets['Sheet1'];
+const sheet_name_list = file.SheetNames;
+const sheet = file.Sheets[sheet_name_list[0]];
+// const sheet = file.Sheets['sheetname'];
 
 const data = xlsx.utils.sheet_to_json(sheet, { header: "A" });
 
