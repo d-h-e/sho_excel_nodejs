@@ -4,9 +4,7 @@ const fs = require('fs');
 const file = xlsx.readFile('./EXCEL-FILE/sho_excel.xlsx');
 const sheet = file.Sheets['Sheet1'];
 
-const data = xlsx.utils.sheet_to_json(sheet);
-
-
+const data = xlsx.utils.sheet_to_json(sheet, { header: "A" });
 
 data.forEach(item => {
     let valueArr = Object.values(item);
